@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bánh Ngọt Ngon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Bánh Ngọt Ngon">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="javascript:void(0)" id="cart-icon" class="cart-icon">
+                <img src="images/cart-icon.png" alt="Giỏ hàng">
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        <div class="admin-login">
+            <a href="javascript:void(0)" id="admin-login-btn">Đăng nhập Admin</a>
+            <a href="javascript:void(0)" id="admin-btn" style="display: none;">Admin</a> <!-- Admin button, hidden by default -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Chào mừng bạn đến với Bánh Ngọt Ngon</h1>
+            <p>Những chiếc bánh ngọt thơm ngon, tươi mới cho bạn những trải nghiệm tuyệt vời!</p>
+            <a href="#products" class="btn">Khám phá ngay</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product-item" data-id="1">
+                <img src="images/cake1.jpg" alt="Bánh Ngọt 1">
+                <h3>Bánh Ngọt 1</h3>
+                <p>Giá: <span class="price">50,000 VND</span></p>
+                <button class="btn add-to-cart">Thêm vào giỏ</button>
+                <button class="btn edit-product" style="display:none;">Chỉnh sửa</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-item" data-id="2">
+                <img src="images/cake2.jpg" alt="Bánh Ngọt 2">
+                <h3>Bánh Ngọt 2</h3>
+                <p>Giá: <span class="price">70,000 VND</span></p>
+                <button class="btn add-to-cart">Thêm vào giỏ</button>
+                <button class="btn edit-product" style="display:none;">Chỉnh sửa</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-item" data-id="3">
+                <img src="images/cake3.jpg" alt="Bánh Ngọt 3">
+                <h3>Bánh Ngọt 3</h3>
+                <p>Giá: <span class="price">80,000 VND</span></p>
+                <button class="btn add-to-cart">Thêm vào giỏ</button>
+                <button class="btn edit-product" style="display:none;">Chỉnh sửa</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Đăng nhập Admin</h2>
+            <form id="admin-login-form">
+                <label for="admin-username">Tài khoản:</label>
+                <input type="text" id="admin-username" required>
+                <label for="admin-password">Mật khẩu:</label>
+                <input type="password" id="admin-password" required>
+                <button type="submit" class="btn">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div id="edit-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-modal">&times;</span>
+            <h2>Chỉnh sửa sản phẩm</h2>
+            <form id="edit-product-form">
+                <label for="edit-product-name">Tên sản phẩm:</label>
+                <input type="text" id="edit-product-name" required>
+                <label for="edit-product-price">Giá sản phẩm (VND):</label>
+                <input type="number" id="edit-product-price" required>
+                <button type="submit" class="btn">Lưu thay đổi</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bánh Ngọt Ngon. Tất cả quyền được bảo vệ.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
